@@ -48,7 +48,7 @@ for (var i = 0; i<groceryList.length; i++){
 };
 
 
-/*Creates a 'totalAmount' method for our groceryList array that runs a For Loop which 
+/* Creates a 'totalAmount' method for our groceryList array that runs a For Loop which 
 	adds up the prices for each item in our list and returns the sum
 	as the variable 'total' */
 
@@ -60,38 +60,14 @@ groceryList.totalAmount = function (){
 		return total.toFixed(2);
 };
 
+/* Creates a 'printedTotal' variable that makes a new DIV element, sets 
+	it's inner content to a concatenation of a string and the sum of
+	our groceryList prices that we generated with the totalAmount method.
+	We then add this new DIV document to our HTML with the appendChild method. */
 
 var printedTotal = document.createElement('div');
 
 printedTotal.innerHTML = "Total: $" + groceryList.totalAmount();
 
 document.body.appendChild(printedTotal);
-
-
-// this is a For loop that adds up the prices of each item
-
-// var total = 0;
-
-// for (var i = 0; i < groceryList.length; i++){
-// 	total += groceryList[i].price;
-// }
-
-// console.log("Total: $" + total.toFixed(2))
-
-
-//this is my script for appending a new html element
-
-// function addToList (){
-// 	var newItemName = document.getElementById('itemName').value;
-// 	var newItemPrice = document.getElementById('itemPrice').value;
-// }
-
-// var obj = {
-// 	name: newItemName,
-// 	price: newItemPrice
-// }
-
-// groceryList.push(obj);
-
-// printedList.innerHTML = "<li>Eggs $2.50</li><li>Broccoli $3.00</li>";
 
