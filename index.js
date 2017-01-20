@@ -46,7 +46,8 @@ for (var i = 0; i<groceryList.length; i++){
 
 	printedList.innerHTML = groceryList[i].name + ': $' + groceryList[i].price.toFixed(2);
 
-	document.body.appendChild(printedList);
+	// document.body.appendChild(printedList);
+	document.getElementById('wrapper').appendChild(printedList);
 
 };
 
@@ -62,17 +63,21 @@ groceryList.totalAmount = function (){
 		return total.toFixed(2);
 };
 
-/* Creates a 'printedTotal' variable that targets an existing HTML element called TotalBox, and sets 
+/* Creates a 'printedTotal' variable that creates an HTML element called TotalBox, and sets 
 	its inner content to a concatenation of a string and the sum of
 	our groceryList prices that we generated with the totalAmount method.
 	We then add the updated TotalBox element to our HTML with the appendChild method. */
 
-// var printedTotal = document.createElement('div');
-var printedTotal = document.getElementById('TotalBox');
+
+var printedTotal = document.createElement('div');
+
+printedTotal.setAttribute('id', 'TotalBox')
 
 printedTotal.innerHTML = "Total: $" + groceryList.totalAmount();
 
-document.body.appendChild(printedTotal);
+document.getElementById('wrapper').appendChild(printedTotal);
+
+
 
 
 
@@ -96,7 +101,8 @@ function addToList(){
 	var printedList = document.createElement('div');
 	printedList.setAttribute('class', 'List-Item');
 	printedList.innerHTML = groceryList[i].name + ': $' + groceryList[i].price.toFixed(2);
-	document.body.appendChild(printedList);
+	// document.body.appendChild(printedList);
+	document.getElementById('wrapper').appendChild(printedList);
 
 	
 	groceryList.totalAmount = function (){
@@ -109,8 +115,13 @@ function addToList(){
 
 	var printedTotal = document.getElementById('TotalBox');
 	printedTotal.innerHTML = "Total: $" + groceryList.totalAmount();
-	document.body.appendChild(printedTotal);
+	
+	// document.body.appendChild(printedTotal);
+	// document.getElementById('wrapper').appendChild(printedTotal);
 
+	// var printedTotal = document.createElement('div');
+	// printedTotal.setAttribute('id', 'TotalBox');
+	// document.getElementById('wrapper').appendChild(printedTotal);
 };
 
 

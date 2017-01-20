@@ -2,3 +2,20 @@ h1{
 	color:green;
 
 }
+
+.List-Item{
+	font-family: Verdana;
+	font-size: 32px;
+	color: maroon;
+}
+
+#TotalBox{
+color: orange;
+}
+
+#wrapper{
+	height: 500px;
+	width: 400px;
+	border: solid black 1px;
+	margin: 0 auto;
+}
