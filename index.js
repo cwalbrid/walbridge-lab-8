@@ -47,7 +47,7 @@ for (var i = 0; i<groceryList.length; i++){
 	printedList.innerHTML = groceryList[i].name + ': $' + groceryList[i].price.toFixed(2);
 
 	// document.body.appendChild(printedList);
-	document.getElementById('wrapper').appendChild(printedList);
+	document.getElementById('list').appendChild(printedList);
 
 };
 
@@ -102,7 +102,9 @@ function addToList(){
 	printedList.setAttribute('class', 'List-Item');
 	printedList.innerHTML = groceryList[i].name + ': $' + groceryList[i].price.toFixed(2);
 	// document.body.appendChild(printedList);
-	document.getElementById('wrapper').appendChild(printedList);
+	document.getElementById('list').appendChild(printedList);
+	
+	document.getElementById('newItem').value = '';
 
 	
 	groceryList.totalAmount = function (){

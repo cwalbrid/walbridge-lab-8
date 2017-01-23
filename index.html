@@ -3,18 +3,27 @@
 <head>
 	<title>Colin Walbridge Lab 8</title>
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link href="https://fonts.googleapis.com/css?family=Lobster+Two:700|Lobster|Roboto" rel="stylesheet">
 </head>
 <body>
-	
-<div id="wrapper">
-		
 
-		<input id="newItem" type="text" placeholder="item name">
-		<input id="newPrice" type="text" placeholder="item price">
+<div id="container">
+	
+	<p id="title">Shopping Cart</p>
+		
+	<div id="wrapper">			
+		<p class="heading">Groceries</p>
+			<div id="list"></div>		
+	</div>	
+
+	<div id="controls">	
+		<input id="newItem" type="text" placeholder="Item name..." onfocus="this.placeholder=''" onblur="this.placeholder='Item name...'"><br>
+		<input id="newPrice" type="text" placeholder="Item price..." onfocus="this.placeholder=''" onblur="this.placeholder='Item price...'"><br>
 		<button id="submit" type="button" onclick="addToList();">Add to List</button>
+	</div>
 
 </div>	
 	
-	<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="index.js"></script>
 </body>
 </html>

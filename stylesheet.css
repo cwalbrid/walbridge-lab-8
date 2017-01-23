@@ -1,21 +1,146 @@
-h1{
-	color:green;
-
+body{
+	background-color: #2B405B;
 }
 
-.List-Item{
-	font-family: Verdana;
-	font-size: 32px;
-	color: maroon;
+#container{
+	display: flex;
+  	flex-direction: column;
+  	justify-content: center;
+  	
 }
 
-#TotalBox{
-color: orange;
+#title{
+	position: absolute;
+	top: 85px;
+	left: 110px;
+	display: flex;
+
+	color: #FCEFEF;
+	/*color: #EFCEBF;*/
+
+	font-family: 'Roboto';
+	font-size: 65px;
+	width: 5%
 }
 
 #wrapper{
+	position: absolute;
+	top: 145px;
+	right:150px;
+
 	height: 500px;
-	width: 400px;
-	border: solid black 1px;
-	margin: 0 auto;
+	width: 450px;
+	/*border: solid black 1px;*/
+	/*margin: 10% auto;*/
+	background-color: #ED8E76;
+	box-shadow: 15px 15px 0 #EFCEBF;
+	border-radius: 35px 35px 25px 35px;
+}
+
+.heading{
+	display: flex;
+	color: #FCEFEF;
+	font-family: 'Roboto';
+	font-size: 42px;
+	font-style: italic;
+	margin: 27px 0px 30px 112px;
+	/*border-bottom: dashed #FCEFEF 3px;*/
+}
+
+#list{
+	/*border: solid black 2px;*/
+	overflow: auto;
+	height: 270px;
+	padding-top: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.List-Item{
+	font-family: 'Roboto';
+	font-size: 30px;
+	line-height: 45px;
+	
+	color: #FCEFEF;
+	margin: 0 0 0 20%;
+}
+
+
+#TotalBox{	
+	border-top: dashed #FCEFEF 3px;
+	margin: 5% auto;
+	width: 60%;
+
+	font-family: 'Roboto';
+	font-size: 30px;
+	line-height: 38px;
+	font-style: italic;
+	color: #FCEFEF;
+}
+
+#controls {
+	position: absolute;
+	bottom: 200px;
+	left: 120px;
+
+	/*border: solid white 2px;*/
+}
+
+input[type=text]{
+	width:225px;
+	height:50px;
+	margin-bottom: 18px;
+	padding: 3px;
+	box-sizing: border-box;
+	
+	outline: none;
+	border:	none;
+	border-bottom: 2px dotted gray; 
+	background-color: transparent;
+	transition: 0.5s;
+	/*transition: width 0.5s ease-in-out;*/
+
+	font-family: 'Roboto';
+	font-size: 20px;
+	color:#FCEFEF;
+
+}
+
+input[type=text]:focus{
+	border-bottom: 2px solid #FCEFEF;
+	width: 300px;
+	color: #FCEFEF;
+	/*font-size: 20px;*/
+}
+
+
+
+#submit{
+	position: absolute;
+	margin-top: 30px;
+	padding: 3px;
+	background-color: #FCEFEF;
+	border: none;
+	border-radius: 10px;
+	height: 40px;
+	width: 130px;
+
+	font-family: 'Roboto';
+	font-size: 18px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #2B405B;
+	transition: .1s;
+}
+
+#submit:hover{
+	box-sizing: border-box;
+	border: solid #FCEFEF 1px;
+	background-color: transparent;
+	color: #FCEFEF;
+}
+
+#submit:focus{
+	outline: none;
+	/*font-style: italic;*/
 }
