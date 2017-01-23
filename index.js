@@ -38,6 +38,7 @@ var groceryList = [
 
 
 for (var i = 0; i<groceryList.length; i++){
+	
 	console.log(groceryList[i].name + ': $' + groceryList[i].price.toFixed(2));
 	
 	var printedList = document.createElement('div');
@@ -88,6 +89,7 @@ into the input fields on the site, and stores those values in a new object calle
 This object is then pushed to the end of the Grocery list array.  */
 
 function addToList(){
+	
 	var newItem = document.getElementById("newItem").value;
 	var newPrice = Number(document.getElementById("newPrice").value);
 
@@ -96,6 +98,7 @@ function addToList(){
 		price: newPrice
 	};
 
+	if(item.name != '' && item.price != ''){
 	groceryList.push(item);
 
 	var printedList = document.createElement('div');
@@ -105,7 +108,7 @@ function addToList(){
 	document.getElementById('list').appendChild(printedList);
 	
 	document.getElementById('newItem').value = '';
-
+	document.getElementById('newPrice').value = '';
 	
 	groceryList.totalAmount = function (){
 		var total = 0;
@@ -117,7 +120,9 @@ function addToList(){
 
 	var printedTotal = document.getElementById('TotalBox');
 	printedTotal.innerHTML = "Total: $" + groceryList.totalAmount();
-	
+	} else {
+		alert('Please enter an item name and price')
+	}
 	// document.body.appendChild(printedTotal);
 	// document.getElementById('wrapper').appendChild(printedTotal);
 
